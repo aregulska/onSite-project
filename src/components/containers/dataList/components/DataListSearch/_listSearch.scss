@@ -1,0 +1,38 @@
+.search-ctrl {
+
+    padding: 1.2rem 2rem;
+    
+    display: flex;
+    align-items: center;
+
+
+    &__input {
+        flex: 1;
+        padding: 1rem 1rem;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #333;
+        background-color: transparent;
+
+        &.active, &:focus {
+            border-bottom: 2px solid $color-primary;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__icon {
+        cursor: pointer;
+        
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__input:hover + &__icon {
+        transform: scale(1.2);
+    }
+    
+
+}

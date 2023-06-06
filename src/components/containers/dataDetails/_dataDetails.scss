@@ -1,0 +1,52 @@
+.data-details {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    padding: 1rem;
+    background-color: rgba($color-primary, 0.3);
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    flex: 1;
+    padding: 0 2rem;
+  }
+
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__bottom {
+    flex: 1;
+  }
+
+  &__photo {
+    width: 55%;
+    align-self: stretch;
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba($color-primary, 0.1);
+  }
+
+  &__form {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  &__add-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+}

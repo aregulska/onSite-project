@@ -1,0 +1,22 @@
+.start-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(rgba(lightblue, 0.7), rgba(lightblue, 0.2)),
+    url("https://firebasestorage.googleapis.com/v0/b/on-site-app.appspot.com/o/backgrounds%2Fbackground1.jpg?alt=media&token=de93c595-22c3-4837-8f5e-afacc00add03")
+      top left no-repeat,
+    url("https://firebasestorage.googleapis.com/v0/b/on-site-app.appspot.com/o/backgrounds%2Fbackground1r.jpg?alt=media&token=8970193b-96e8-4974-b574-fd629a3256ef")
+      bottom right no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__cont {
+    width: 38rem;
+  }
+}

@@ -1,0 +1,18 @@
+.btn-add {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+
+  background-color: $color-primary;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: $shadow-small;
+  }
+}

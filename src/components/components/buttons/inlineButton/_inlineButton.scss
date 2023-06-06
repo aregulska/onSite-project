@@ -1,0 +1,13 @@
+.btn-inline {
+  margin-top: 1rem;
+  color: #1769aa;
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  padding-right: 1.4rem;
+
+  &:hover {
+    color: $color-black;
+    cursor: pointer;
+  }
+}

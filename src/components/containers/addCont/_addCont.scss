@@ -1,0 +1,22 @@
+.btn-add-drag {
+  z-index: $layer-1;
+  border-radius: 50%;
+  box-shadow: $shadow-small;
+
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition-property: width, height, background-color;
+  transition-duration: 0.2s;
+
+  &:hover {
+    box-shadow: $shadow-medium;
+    cursor: pointer;
+  }
+  &.dragged {
+    box-shadow: $shadow-small;
+  }
+}

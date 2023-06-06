@@ -1,0 +1,17 @@
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: $layer-4;
+}
+
+.modal__ctrl {
+  padding: 2rem;
+  margin: auto auto;
+
+  width: 40rem;
+  height: 60rem;
+}

@@ -1,0 +1,39 @@
+.nav {
+  width: 5rem;
+
+  background-color: $color-black;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.6rem;
+}
+
+.nav-element {
+  color: $color-white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+
+  & a:hover,
+  &.active:hover {
+    color: $color-primary;
+    cursor: pointer;
+    filter: brightness(1.4);
+  }
+  & a {
+    color: $color-white;
+    text-decoration: none;
+  }
+  & a.active {
+    color: $color-primary;
+  }
+
+  &__icon {
+  }
+  &__title {
+    padding-top: 0.4rem;
+  }
+}

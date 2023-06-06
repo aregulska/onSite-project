@@ -1,0 +1,59 @@
+.project-row {
+  display: flex;
+  border-bottom: 2px solid rgba(lightblue, 0.4);
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(lightblue, 0.4);
+  }
+
+  &__img {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+
+    &--alt {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: lightblue;
+    }
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      z-index: 5;
+    }
+  }
+  &__info {
+    flex: 1;
+    align-self: center;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+  }
+  &__loader {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: rgba(lightblue, 0.4);
+  }
+}

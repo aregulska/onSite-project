@@ -1,0 +1,50 @@
+.pdf-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: auto !important;
+}
+.react-pdf__Page__textContent {
+  display: none;
+}
+.react-pdf__Page__annotations {
+  display: none;
+}
+
+.add-form {
+  background-color: white;
+  padding: 3rem;
+}
+
+.pdf-viewer-menu {
+  z-index: $layer-1;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: $color-primary;
+
+  display: flex;
+
+  &__group {
+    padding: 0 2rem;
+    border-right: 2px dotted #333;
+
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__button {
+    padding: 0 1.2rem;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: $color-primary;
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+  }
+}

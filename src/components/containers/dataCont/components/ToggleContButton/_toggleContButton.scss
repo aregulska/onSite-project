@@ -1,0 +1,36 @@
+.cont-button {
+  padding: 1.2rem 2rem;
+  border-radius: 100px;
+  box-shadow: $shadow-small;
+  border: 2px solid #333;
+  background-color: #f1f1f1;
+  filter: brightness(1.2);
+  white-space: nowrap;
+
+  z-index: $layer-2;
+
+  position: absolute;
+  top: 2rem;
+  transition: all 0.3s;
+  &.active {
+    background-color: $color-primary;
+  }
+  &.left {
+    left: 2rem;
+  }
+  &.right {
+    right: 2rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1);
+  }
+}
+
+.cont-button.left.enabled {
+  transform: translateX(42rem);
+}
+.cont-button.right.enabled {
+  transform: translateX(-42rem);
+}

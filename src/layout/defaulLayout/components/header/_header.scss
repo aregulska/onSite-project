@@ -1,0 +1,28 @@
+.header {
+  height: $header-height;
+
+  background-color: $color-black;
+  color: $color-white;
+
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu {
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    flex: 1;
+    margin-right: auto;
+    padding-left: 1.8rem;
+    text-align: center;
+    color: #f1f1f1;
+    margin-top: -0.1rem;
+  }
+}

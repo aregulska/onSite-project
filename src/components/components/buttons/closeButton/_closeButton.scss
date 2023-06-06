@@ -1,0 +1,12 @@
+.btn-close {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    transform: scale(1.2);
+    color: red;
+    cursor: pointer;
+  }
+}

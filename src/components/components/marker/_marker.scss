@@ -1,0 +1,88 @@
+.marker {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  z-index: 5;
+}
+
+.markerIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.4rem;
+  z-index: $layer-2;
+
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: width, height, background-color;
+  transition-duration: 0.2s;
+
+  &.disabled {
+    background-color: grey;
+  }
+  &:not(.disabled) {
+    background-color: orangered;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: orange;
+  }
+
+  &.dragged {
+    box-shadow: $shadow-small;
+    width: 3.4rem;
+    height: 3.4rem;
+    cursor: pointer;
+  }
+}
+.marker-tooltip {
+  display: none;
+  bottom: 3.4rem;
+  left: 3.4rem;
+  position: absolute;
+  z-index: $layer-3;
+  width: 20rem;
+  height: 20rem;
+
+  box-shadow: $shadow-medium;
+  border-radius: inherit;
+
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.marker:not(.dragged).hovered .marker-tooltip {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+
+  &__photo {
+    flex: 1;
+    overflow: hidden;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 4rem;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+}
