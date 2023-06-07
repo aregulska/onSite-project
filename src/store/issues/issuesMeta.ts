@@ -59,6 +59,7 @@ export const initialComment = {
 const issueStatusProp: Property = {
   id: "status",
   name: "status",
+  display_name: "Status",
   type: "select",
   options: [
     { id: "pending", name: "pending" },
@@ -69,6 +70,7 @@ const issueStatusProp: Property = {
 const issueCategoryProp: Property = {
   id: "category",
   name: "category",
+  display_name: "Category",
   type: "select",
   options: [
     { id: "hvac", name: "hvac" },

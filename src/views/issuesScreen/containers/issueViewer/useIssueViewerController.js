@@ -22,7 +22,7 @@ export const useIssueViewerController = () => {
 
   // RESIZE
   //TODO: ogarnąć wartośc startową
-  const INITIAL_WIDTH = window.innerWidth;
+  const INITIAL_WIDTH = window.innerWidth - 60;
   const [pdfWidth, setPdfWidth] = useState(INITIAL_WIDTH);
   const handleChangePdfWidth = useCallback((width) => {
     setPdfWidth(width);

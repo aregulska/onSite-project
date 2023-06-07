@@ -116,7 +116,7 @@ export const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
       inputRef: index === 0 ? ref : null,
       ...formStyle,
       id: property.name,
-      label: property.name,
+      label: property.display_name,
       value: value,
       property,
     };

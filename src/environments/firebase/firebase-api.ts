@@ -33,7 +33,7 @@ export function subscribeToDb(q: any, add: Function, edit: Function) {
       }
       // TODO: czy mogę w modyfikacji dostać tylko zmienione cechy
       if (change.type === "modified") {
-        // console.log("MODIFY IN STORE", col, change.doc.id, change.doc.data());
+        // console.log("MODIFY IN STORE", change.doc.id, change.doc.data());
         edit(changedItem);
       }
       if (change.type === "removed") {

@@ -32,8 +32,18 @@
   }
 
   &__icon {
+    text-align: center;
+
+    &.not-active {
+      color: lightgray;
+    }
   }
   &__title {
     padding-top: 0.4rem;
+    text-align: center;
+
+    &.not-active {
+      color: lightgray;
+    }
   }
 }

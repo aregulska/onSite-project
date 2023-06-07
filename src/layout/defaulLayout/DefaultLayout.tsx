@@ -9,7 +9,7 @@ export const DefaultLayout = () => {
     <div className="main-screen">
       <Header />
       <div className="main-cont">
-        {false && <Nav />}
+        <Nav />
         <div className="content">
           <Outlet />
         </div>

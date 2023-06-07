@@ -10,21 +10,30 @@ interface NavIconProps {
   title: string;
   value: string;
   children: React.ReactNode;
+  active?: boolean;
 }
 const NavIcon: FunctionComponent<NavIconProps> = ({
   title,
   children,
   value,
+  active,
 }) => {
   return (
     <div className="nav-element">
-      <NavLink
-        to={`${value}`}
-        className={({ isActive }) => (isActive ? "active" : "undefined")}
-      >
-        <div className="nav-element__icon">{children}</div>
-        <div className="nav-element__title">{title}</div>
-      </NavLink>
+      {active ? (
+        <NavLink
+          to={`${value}`}
+          className={({ isActive }) => (isActive ? "active" : "undefined")}
+        >
+          <div className="nav-element__icon">{children}</div>
+          <div className="nav-element__title">{title}</div>
+        </NavLink>
+      ) : (
+        <div>
+          <div className="nav-element__icon not-active">{children}</div>
+          <div className="nav-element__title not-active">{title}</div>
+        </div>
+      )}
     </div>
   );
 };
@@ -32,7 +41,7 @@ const NavIcon: FunctionComponent<NavIconProps> = ({
 export const Nav = () => {
   return (
     <div className="nav">
-      <NavIcon title="Issues" value="issues">
+      <NavIcon title="Issues" value="issues" active={true}>
         <RoomIcon sx={{ fontSize: 24 }} />
       </NavIcon>
       <NavIcon title="Charts" value="dashboard">
