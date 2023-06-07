@@ -82,7 +82,7 @@ export const ListRow = ({
         </div>
         <div className="list-row__info-bottom">
           <div className={responsibleClass}>
-            {responsible ? responsible?.name : fileEl ? fileEl : "Unknown"}
+            {responsible ? responsible?.name : "Unknown"}
           </div>
 
           <div className={dateClass}>

@@ -38,7 +38,7 @@ export const PdfViewer = ({
       ref={viewerRef}
       style={viewerStyle}
     >
-      <p>{pdfWidth}</p>
+      {false && <p>{pdfWidth}</p>}
       {!activeFile && <p> Choose one file</p>}
       {activeFile && <MarkersLayer scale={scale} />}
       {activeFile && (

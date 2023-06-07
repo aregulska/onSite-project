@@ -31,7 +31,7 @@ export const useDataDetailsController = (elementId: string) => {
   };
   function handleUpload(e: any) {
     let path = "issues/" + e.target.files[0].name;
-    // console.log("UPLOAD PHOTO", e.target.files[0], "PATH", path);
+    // console.log("UPLOAD PHOTO", e);
     if (!element) return;
     uploadIssueFileToStorage(e.target.files[0], path, element.id);
   }

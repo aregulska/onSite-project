@@ -8,8 +8,8 @@ export const InputPhoto = ({
   photo: string;
   onUpload: Function;
 }) => {
-  function handleChange() {
-    onUpload();
+  function handleChange(e) {
+    onUpload(e);
   }
 
   return (
