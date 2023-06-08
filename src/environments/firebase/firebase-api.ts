@@ -24,30 +24,30 @@ export function createQuery(col: string, myQuery: MyQuery) {
 
 export function subscribeToDb(q: any, add: Function, edit: Function) {
   return onSnapshot(q, (snapshot: any) => {
-    // console.log("SET CHANGE LOADING TO TRUE");
+    // //console.log("SET CHANGE LOADING TO TRUE");
     snapshot.docChanges().forEach((change: any) => {
       const changedItem = { ...change.doc.data(), id: change.doc.id };
       if (change.type === "added") {
-        // console.log("ADD TO STORE", col, change.doc.data());
+        // //console.log("ADD TO STORE", col, change.doc.data());
         add(changedItem);
       }
       // TODO: czy mogę w modyfikacji dostać tylko zmienione cechy
       if (change.type === "modified") {
-        // console.log("MODIFY IN STORE", change.doc.id, change.doc.data());
+        // //console.log("MODIFY IN STORE", change.doc.id, change.doc.data());
         edit(changedItem);
       }
       if (change.type === "removed") {
-        // console.log("Removed: ", change.doc.data());
+        // //console.log("Removed: ", change.doc.data());
       }
     });
-    // console.log("SUBSCRIBE CHANGES");
+    // //console.log("SUBSCRIBE CHANGES");
   });
 }
 
 export async function addNewToDb(col: string, data: {}) {
   try {
     const response = await addDoc(collection(db, col), data);
-    console.log("ADD TO DB DATABASE - WHAT IS RETURNING", response);
+    //console.log("ADD TO DB DATABASE - WHAT IS RETURNING", response);
     return response;
   } catch (e) {
     console.error("Error adding document: ", e);
@@ -67,7 +67,7 @@ export async function editDocInDb(col: string, id: string, patch: {}) {
   try {
     const docRef = doc(db, col, id);
     const response = await updateDoc(docRef, patch);
-    console.log("EDIT IN DATABASE - WHAT IS RETURNING", response);
+    //console.log("EDIT IN DATABASE - WHAT IS RETURNING", response);
     return response;
   } catch (e) {
     console.error("Error editing document: ", e);

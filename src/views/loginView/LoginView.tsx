@@ -1,15 +1,15 @@
 import React from "react";
 
-import { Form } from "../../components/containers/form/Form.tsx";
-import { InlineButton } from "../../components/components/buttons/inlineButton/InlineButton";
-import InfoBox from "../../components/components/wanings/InfoBox.tsx";
+import { Form } from "../../ui/containers/form/Form.tsx";
+import { InlineButton } from "../../ui/components/buttons/inlineButton/InlineButton";
+import InfoBox from "../../ui/components/wanings/InfoBox.tsx";
 
 import { useLoginViewController } from "./useLoginViewController";
 
 // CEL KOMPONENTU: wyrenderowanie formularza logowania i rejestracji
 
 export const LoginView = () => {
-  console.log("RENDER: LOGIN VIEW");
+  //console.log("RENDER: LOGIN VIEW");
   const {
     userData,
     loginError,

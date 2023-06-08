@@ -10,12 +10,12 @@ const plansSlice = createSlice({
   initialState: initialPlanState,
   reducers: {
     planAdded: (state, action) => {
-      // console.log("ADD PLAN TO STORE", action.payload);
+      // //console.log("ADD PLAN TO STORE", action.payload);
       let newPlan = action.payload;
       state.push(newPlan);
     },
     clearAllPlans: () => {
-      // console.log("CLEAR ALL PLAN");
+      // //console.log("CLEAR ALL PLAN");
       return [];
     },
   },

@@ -15,13 +15,13 @@ async function uploadFileToStorage(file: File, path: string) {
     "state_changed",
     (snapshot) => {
       const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log("Upload is " + progress + "% done");
+      //console.log("Upload is " + progress + "% done");
       switch (snapshot.state) {
         case "paused":
-          console.log("Upload is paused");
+          //console.log("Upload is paused");
           break;
         case "running":
-          console.log("Upload is running");
+          //console.log("Upload is running");
           break;
         default:
           break;
@@ -45,7 +45,7 @@ async function uploadFileToStorage(file: File, path: string) {
     () => {
       // Upload completed successfully, now we can get the download URL
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        console.log("File available at", downloadURL);
+        //console.log("File available at", downloadURL);
       });
     }
   );
@@ -59,9 +59,9 @@ export async function uploadIssueFileToStorage(
   const storageRef = ref(storage, path);
   try {
     const uploadTask = await uploadBytes(storageRef, file);
-    console.log("UPLOAD TASK RETURN ", uploadTask);
+    //console.log("UPLOAD TASK RETURN ", uploadTask);
     const downloadUrl = await getDownloadURL(ref(storage, path));
-    console.log("DOWNLOAD URL", downloadUrl);
+    //console.log("DOWNLOAD URL", downloadUrl);
     editDocInDb("issues", id, { photoUrl: downloadUrl });
   } catch (error) {
     return error;

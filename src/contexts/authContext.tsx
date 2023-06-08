@@ -16,17 +16,17 @@ export const AuthContextProvider = ({
   const [user, setUser] = useState<UserContext>(authInitialContext);
 
   useEffect(() => {
-    console.log("SUBSCRIBE TO AUTH CHANGE");
+    //console.log("SUBSCRIBE TO AUTH CHANGE");
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
-        console.log("AUTH CHANGE", userAuth);
+        //console.log("AUTH CHANGE", userAuth);
         setUser({ user: userAuth });
       } else {
         setUser(authInitialContext);
       }
     });
     return () => {
-      console.log("UNSUBSCRIBE FROM AUTH CHANGE");
+      //console.log("UNSUBSCRIBE FROM AUTH CHANGE");
       unsubscribe();
     };
   }, []);
@@ -36,7 +36,7 @@ export const AuthContextProvider = ({
 
 export const useAuth = () => {
   const ctx = useContext(authContext);
-  console.log("AUTH CONTEXT CHANGE", ctx);
+  //console.log("AUTH CONTEXT CHANGE", ctx);
   if (!ctx) throw Error("No Auth context provider");
   return ctx;
 };

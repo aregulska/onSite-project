@@ -11,17 +11,17 @@ const issueSlice = createSlice({
   initialState: initialIssuesState,
   reducers: {
     clearAllIssues: () => {
-      // console.log("CLEAR ALL ISSUES");
+      // //console.log("CLEAR ALL ISSUES");
       return [];
     },
     issueAdded: (state, action: PayloadAction<Issue>) => {
-      // console.log("ADD ISSUE TO STORE", action.payload);
+      // //console.log("ADD ISSUE TO STORE", action.payload);
       let newIssue = action.payload;
       state.push(newIssue);
     },
     issueEdited: (state, action: PayloadAction<Issue>) => {
       const changedElement = action.payload;
-      // console.log("ISSUE EDITED IN REDUX", changedElement);
+      // //console.log("ISSUE EDITED IN REDUX", changedElement);
       const index = state.findIndex((el) => el.id === changedElement.id);
       state[index] = changedElement;
     },
@@ -43,7 +43,7 @@ export const useGetOneIssue = (id: string | null) => {
 export const useGetMaxNumber = () => {
   const issues = useGetAllIssues();
   const max = Math.max(...issues.map((issue) => Number(issue.no))) + 1;
-  // console.log("USE MAX NUMBER", issues, max);
+  // //console.log("USE MAX NUMBER", issues, max);
   return issues.length === 0 ? 1 : max;
 };
 

@@ -30,7 +30,7 @@ export const usePdfViewerController = (handleChangePdfWidth: Function) => {
   useEffect(() => {
     let view = viewerRef.current;
     const startDrag = (e: MouseEvent) => {
-      //console.log('START drag view', e.target, view);
+      ////console.log('START drag view', e.target, view);
       const target = e.target as Element;
       if (target.classList.contains("react-pdf__Page__canvas") && view) {
         dragAndDrop(e, {

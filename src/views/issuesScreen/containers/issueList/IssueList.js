@@ -1,10 +1,10 @@
-import { DataCont } from "../../../../components/containers/dataCont/DataCont";
+import { DataCont } from "../../../../ui/containers/dataCont/DataCont";
 
 import { useIssueListController } from "./useIssueListController";
 
 // CEL KONTROLKI: przekazać propsy do DataCont
 export const IssueList = () => {
-  console.log("RENDER ISSUE LIST");
+  //console.log("RENDER ISSUE LIST");
 
   const {
     activeIssueId,

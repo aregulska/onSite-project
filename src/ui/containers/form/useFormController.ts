@@ -8,7 +8,7 @@ export const useFormController = (onOk: () => void | {}) => {
     const target = e.target as HTMLInputElement;
     if (!target.files) return;
     const file = target.files[0];
-    // console.log("UPLOAD PHOTO IN FORM", file);
+    // //console.log("UPLOAD PHOTO IN FORM", file);
     setPhotoFile(file);
   };
   const photoUrl = photoFile ? URL.createObjectURL(photoFile) : null;
@@ -21,11 +21,11 @@ export const useFormController = (onOk: () => void | {}) => {
 
   // DODANIE ZDJĘCIA DO ISSUE
   function handleOkWithPhoto() {
-    // console.log("NEW ELEMENT", newElement);
+    // //console.log("NEW ELEMENT", newElement);
     const newElement = onOk();
     if (photoFile && newElement) {
       let path = "issues/" + photoFile.name;
-      console.log("UPLOAD PHOTO", photoFile, "PATH", path);
+      //console.log("UPLOAD PHOTO", photoFile, "PATH", path);
       uploadIssueFileToStorage(photoFile, path, newElement.id);
     }
   }

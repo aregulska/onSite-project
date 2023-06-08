@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/router.js";
 
 import { Provider } from "react-redux";
 import { store } from "./store/store.ts";
 import { UiContextProvider } from "./contexts/uiContext.tsx";
-// import { Router } from "./router/router.ts";
 import { AuthContextProvider } from "./contexts/authContext.tsx";
+import "./scss/main.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
@@ -15,9 +15,7 @@ root.render(
     <Provider store={store}>
       <AuthContextProvider>
         <UiContextProvider>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
+          <RouterProvider router={router} />
         </UiContextProvider>
       </AuthContextProvider>
     </Provider>

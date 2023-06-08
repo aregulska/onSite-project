@@ -26,7 +26,7 @@ export const useMarkerController = (issue: Issue, scale: number) => {
   });
 
   const changeMarkerPosition = (left: number, top: number) => {
-    console.log("changeMarkerPosition", left, top);
+    //console.log("changeMarkerPosition", left, top);
     setMarkerPosition({ left: left, top: top });
   };
 
@@ -37,7 +37,7 @@ export const useMarkerController = (issue: Issue, scale: number) => {
   };
 
   const handleStartDrag = (e: MouseEvent) => {
-    //console.log('start drag marker');
+    ////console.log('start drag marker');
     e.preventDefault();
     if (activeMarker) {
       let marker = markerRef.current;

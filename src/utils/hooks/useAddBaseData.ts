@@ -31,7 +31,7 @@ export function useAddBaseData() {
   useEffect(() => {
     buildingPaths.forEach((path) => {
       downloadFilesUrlsFromStorage(path).then((url) => {
-        console.log("DOWNLOAD URL", url);
+        //console.log("DOWNLOAD URL", url);
       });
     });
   }, []);

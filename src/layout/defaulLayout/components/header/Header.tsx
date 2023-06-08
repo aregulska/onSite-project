@@ -1,7 +1,7 @@
 import React from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-import { LogOutButton } from "../../../../components/components/buttons/logOutButton/LogOutButton";
+import { LogOutButton } from "../../../../ui/components/buttons/logOutButton/LogOutButton";
 
 import { useUiContext } from "../../../../contexts/uiContext";
 import { useGetOneProject } from "../../../../store/projects/projectsSlice";

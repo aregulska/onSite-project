@@ -38,7 +38,7 @@ export const initialIssue = {
   comments: [],
   project: "",
   plan: "",
-  category: null,
+  category: "",
 };
 
 export interface Comment {

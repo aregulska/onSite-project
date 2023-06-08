@@ -13,7 +13,7 @@ export const useChangeProject = () => {
   const navigate = useNavigate();
 
   return () => {
-    console.log("CHANGE PROJECT");
+    //console.log("CHANGE PROJECT");
     dispatch(clearAllIssues());
     dispatch(clearAllPlans());
     dispatch(clearAllProjects());

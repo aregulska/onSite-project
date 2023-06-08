@@ -1,15 +1,15 @@
-import { PdfViewer } from "../../../../components/containers/pdfViewer/PdfViewer";
+import { PdfViewer } from "../../../../ui/containers/pdfViewer/PdfViewer";
 import { ViewerMenu } from "./containers/ViewerMenu";
-import { AddCont } from "../../../../components/containers/addCont/AddCont";
-import { AddTestForm } from "../../../../components/containers/addCont/components/AddTestForm";
-import { AddTestDragButton } from "../../../../components/containers/addCont/components/AddTestDragButton";
+import { AddCont } from "../../../../ui/containers/addCont/AddCont";
+import { AddTestForm } from "../../../../ui/containers/addCont/components/AddTestForm";
+import { AddTestDragButton } from "../../../../ui/containers/addCont/components/AddTestDragButton";
 
 import { useIssueViewerController } from "./useIssueViewerController";
 import { MarkersLayer } from "./containers/MarkersLayer";
 
 //CEL KOMPONENTU: przekazanie informacji do komponentu dodawania oraz do PDF Viewer
 export const IssueViewer = () => {
-  console.log("RENDER ISSUE VIEWER");
+  //console.log("RENDER ISSUE VIEWER");
 
   const {
     scale,

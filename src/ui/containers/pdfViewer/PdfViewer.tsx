@@ -21,7 +21,7 @@ export const PdfViewer = ({
   pdfWidth,
   handleChangePdfWidth,
 }: PdfViewerProps) => {
-  console.log("RENDER PDF VIEWER");
+  //console.log("RENDER PDF VIEWER");
 
   const {
     activeFile,

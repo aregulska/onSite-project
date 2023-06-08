@@ -11,12 +11,12 @@ const projectsSlice = createSlice({
   initialState: initialState,
   reducers: {
     projectAdded: (state: Project[], action: PayloadAction<Project>) => {
-      // console.log("ADD PROJECT TO STORE", action.payload);
+      // //console.log("ADD PROJECT TO STORE", action.payload);
       let newProject = action.payload;
       state.push(newProject);
     },
     clearAllProjects: () => {
-      // console.log("CLEAR ALL PROJECTS");
+      // //console.log("CLEAR ALL PROJECTS");
       return [];
     },
   },

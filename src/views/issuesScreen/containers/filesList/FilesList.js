@@ -1,9 +1,9 @@
-import { DataCont } from "../../../../components/containers/dataCont/DataCont";
+import { DataCont } from "../../../../ui/containers/dataCont/DataCont";
 
 import { useFilesListController } from "./useFilesListController";
 
 export const FilesList = () => {
-  console.log("RENDER FILES LIST");
+  //console.log("RENDER FILES LIST");
 
   const {
     activeFileId,

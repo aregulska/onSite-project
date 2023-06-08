@@ -22,7 +22,7 @@ export const useLoginViewController = () => {
   const location = useLocation().pathname;
 
   function handleChangeMode() {
-    // console.log("CONTROLLER: CHANGE MODE");
+    // //console.log("CONTROLLER: CHANGE MODE");
     if (location === "/register") {
       navigate("/");
     } else {
@@ -30,22 +30,22 @@ export const useLoginViewController = () => {
     }
   }
   function handleDataChange(property: string, value: any) {
-    // console.log("CONTROLLER: CHANGE");
+    // //console.log("CONTROLLER: CHANGE");
     setUserData((prev) => ({ ...prev, [property]: value }));
   }
   function handleDataReset() {
-    // console.log("CONTROLLER: RESET");
+    // //console.log("CONTROLLER: RESET");
     setUserData(initialUserState);
   }
 
   async function handleRegister() {
-    console.log("CONTROLLER: REGISTER");
+    //console.log("CONTROLLER: REGISTER");
     try {
       await registerUser(userData);
       setUserData(initialUserState);
       navigate("/projects");
     } catch (error: any) {
-      console.log("ERROR", error.message, error.code);
+      //console.log("ERROR", error.message, error.code);
       if (error.code === "auth/email-already-in-use") {
         setLoginError(
           "This email address is already in use. Please check if you entered proper data."
@@ -71,16 +71,16 @@ export const useLoginViewController = () => {
   }
 
   async function handleSignIn() {
-    console.log("CONTROLLER: SIGN IN");
+    //console.log("CONTROLLER: SIGN IN");
     setLoginError(null);
     try {
       await signInUser(userData.email, userData.password);
       setUserData(initialUserState);
       navigate("/projects");
 
-      // console.log("USER", user);
+      // //console.log("USER", user);
     } catch (error: any) {
-      // console.log("ERROR", error.message, error.code);
+      // //console.log("ERROR", error.message, error.code);
       if (
         error.code === "auth/user-not-found" ||
         error.code === "auth/wrong-password"

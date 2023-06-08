@@ -4,12 +4,12 @@ import { useGetIssuesForFile } from "../../../../../store/issues/issueSlice";
 import { useFilter } from "../../../../../utils/hooks/useFilter.ts";
 import { useUiContext } from "../../../../../contexts/uiContext";
 
-import { Marker } from "../../../../../components/components/marker/Marker";
+import { Marker } from "../../../../../ui/components/marker/Marker";
 
 // CEL KOMPONENTU: wyświetlenie markerów na PDF
 
 export const MarkersLayer = ({ scale }) => {
-  console.log("RENDER MARKERS LAYER");
+  //console.log("RENDER MARKERS LAYER");
   const {
     file,
     issue: activeIssueId,

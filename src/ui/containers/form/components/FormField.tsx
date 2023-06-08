@@ -101,7 +101,7 @@ export const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
     const propName = property.name;
     let value = data[propName as keyof GlobalEntityProps];
 
-    // console.log("FORM FIELD FORM STYLE", formStyle);
+    // //console.log("FORM FIELD FORM STYLE", formStyle);
     const handleChange = (e: ChangeEvent) => {
       const target = e.target as HTMLInputElement;
       handleEditField(property.name, target.value);

@@ -33,7 +33,7 @@ export const dragAndDrop = (
 
   let diffX = startX - pointX;
   let diffY = startY - pointY;
-  //console.log('START', pointX, pointY)
+  ////console.log('START', pointX, pointY)
   let posX: number;
   let posY: number;
 
@@ -45,14 +45,14 @@ export const dragAndDrop = (
   };
 
   const stopDrag = () => {
-    //console.log('STOP', viewerLeft, viewerRef.current.style.left);
+    ////console.log('STOP', viewerLeft, viewerRef.current.style.left);
     setDraggedState(false);
     if (reset) {
       setPos(startX - diffX, startY - diffY);
     }
 
     if (dropAction) {
-      //console.log('DROP', posX, contX, contScale);
+      ////console.log('DROP', posX, contX, contScale);
       dropAction((posX - contX) / contScale, (posY - contY) / contScale);
     }
     window.removeEventListener("mousemove", dragView);

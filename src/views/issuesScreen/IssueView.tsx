@@ -6,10 +6,10 @@ import { IssueViewer } from "./containers/issueViewer/IssueViewer";
 
 import { useIssueViewController } from "./useIssueViewController";
 
-// import { useIssueViewController } from "./useIssueViewController";
 // CEL KOMPONENTU - subskrypcja do reduxa i db oraz rendorowanie komponentów - stan ich otwarcia
 export const IssueView = () => {
   // TODO: będzie zwracało stan ładowania danych - użyć go
+
   console.log("RENDER ISSUE SCREEN");
   useIssueViewController();
 

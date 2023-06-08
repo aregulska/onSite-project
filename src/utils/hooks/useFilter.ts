@@ -11,7 +11,7 @@ export function useFilter(
   dataArray: {}[],
   propsArray: string[]
 ) {
-  // console.log("USE FILTER", filterText, dataArray, propsArray);
+  // //console.log("USE FILTER", filterText, dataArray, propsArray);
   if (filterText) {
     let filterArray: {}[] = [];
     let filterBy = filterText.toLowerCase();
@@ -23,7 +23,7 @@ export function useFilter(
         let valueToFilter: string = item[prop as keyof {}];
         if (typeof valueToFilter === "string") {
           if (valueToFilter.toLowerCase().includes(filterBy)) {
-            // console.log(item[prop].toLowerCase());
+            // //console.log(item[prop].toLowerCase());
             if (
               filterArray.find(
                 (el) => el["id" as keyof {}] === item["id" as keyof {}]
@@ -38,9 +38,9 @@ export function useFilter(
     });
     return filterArray;
   } else {
-    // console.log("IN HOOK", filterText, setFilterText, dataArray);
+    // //console.log("IN HOOK", filterText, setFilterText, dataArray);
     return dataArray;
   }
 
-  // console.log(filterBy, filterArray);
+  // //console.log(filterBy, filterArray);
 }

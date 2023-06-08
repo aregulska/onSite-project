@@ -54,37 +54,37 @@ export const UiContextProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const handleOnChooseFile = useCallback((fileId: string) => {
-    console.log("CHANGE CTX: CHOOSE FILE", fileId);
+    //console.log("CHANGE CTX: CHOOSE FILE", fileId);
     setUiState((prev) => ({ ...prev, file: fileId }));
   }, []);
 
   const handleOnChooseIssue = useCallback((issueId: string) => {
-    console.log("CHANGE CTX: CHOOSE ISSUE", issueId);
+    //console.log("CHANGE CTX: CHOOSE ISSUE", issueId);
     setUiState((prev) => ({ ...prev, issue: issueId }));
   }, []);
 
   const handleOnChangeFilter = useCallback((filterText: string) => {
-    console.log("CHANGE CTX: FILTER ISSUE CONTEXT", filterText);
+    //console.log("CHANGE CTX: FILTER ISSUE CONTEXT", filterText);
     setUiState((prev) => ({ ...prev, filterText: filterText }));
   }, []);
 
   const handleChangeScreen = useCallback((screen: string) => {
-    console.log("CHANGE CTX: CHANGE SCREEN", screen);
+    //console.log("CHANGE CTX: CHANGE SCREEN", screen);
     setUiState((prev) => ({ ...prev, screen: screen }));
   }, []);
 
   const handleOpenFile = useCallback((openFile: boolean) => {
-    console.log("CHANGE CTX: OPEN FILE CONT", openFile);
+    //console.log("CHANGE CTX: OPEN FILE CONT", openFile);
     setUiState((prev) => ({ ...prev, openFile: openFile }));
   }, []);
 
   const handleOpenIssue = useCallback((openIssue: boolean) => {
-    console.log("CHANGE CTX: OPEN ISSUE CONT", openIssue);
+    //console.log("CHANGE CTX: OPEN ISSUE CONT", openIssue);
     setUiState((prev) => ({ ...prev, openIssue: openIssue }));
   }, []);
 
   const handleResetContext = useCallback(() => {
-    console.log("RESET CTX");
+    //console.log("RESET CTX");
     setUiState(uiInitialContext);
   }, []);
 

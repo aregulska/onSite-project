@@ -11,11 +11,11 @@ const usersSlice = createSlice({
   initialState: initialUserState,
   reducers: {
     clearAllUsers: () => {
-      // console.log("CLEAR ALL USERS");
+      // //console.log("CLEAR ALL USERS");
       return [];
     },
     userAdded: (state, action: PayloadAction<User>) => {
-      // console.log("ADD USER TO STORE", action.payload);
+      // //console.log("ADD USER TO STORE", action.payload);
       let newUser = action.payload;
       state.push(newUser);
     },

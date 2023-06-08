@@ -6,24 +6,24 @@
 @import "../layout/defaulLayout/defaultLayout";
 @import "../layout/startLayout/startLayout";
 
-@import "../components/containers/form/form";
-@import "../components/containers/pdfViewer/pdfViewer";
-@import "../components/containers/dataCont/dataCont";
-@import "../components/containers/dataDetails/dataDetails";
-@import "../components/containers/dataList/components/DataListRow/listRow";
-@import "../components/containers/dataList/components/DataListSearch/listSearch";
-@import "../components/containers/dataCont/components/ToggleContButton/toggleContButton";
-@import "../components/containers/dataDetails/components/discussionItem";
-@import "../components/containers/addCont/addCont";
+@import "../ui/containers/form/form";
+@import "../ui/containers/pdfViewer/pdfViewer";
+@import "../ui/containers/dataCont/dataCont";
+@import "../ui/containers/dataDetails/dataDetails";
+@import "../ui/containers/dataList/components/DataListRow/listRow";
+@import "../ui/containers/dataList/components/DataListSearch/listSearch";
+@import "../ui/containers/dataCont/components/ToggleContButton/toggleContButton";
+@import "../ui/containers/dataDetails/components/discussionItem";
+@import "../ui/containers/addCont/addCont";
 
-@import "../components/components/marker/marker";
-@import "../components/components/modal/modal";
-@import "../components/components/buttons/logOutButton/logOutButton";
-@import "../components/components/buttons/inlineButton/inlineButton";
-@import "../components/components/inputs/inputPhoto";
-@import "../components/components/buttons/addButton/addButton";
-@import "../components/components/buttons/closeButton/closeButton";
-@import "../components/components/wanings/infoBox";
+@import "../ui/components/marker/marker";
+@import "../ui/components/modal/modal";
+@import "../ui/components/buttons/logOutButton/logOutButton";
+@import "../ui/components/buttons/inlineButton/inlineButton";
+@import "../ui/components/inputs/inputPhoto";
+@import "../ui/components/buttons/addButton/addButton";
+@import "../ui/components/buttons/closeButton/closeButton";
+@import "../ui/components/wanings/infoBox";
 
 @import "../views/issuesScreen/issueView";
 @import "../views/loginView/loginView";

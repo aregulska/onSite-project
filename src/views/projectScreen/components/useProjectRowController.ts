@@ -7,7 +7,7 @@ export const useProjectRowController = () => {
   const { onChooseProject } = useUiContext();
 
   function handleChooseProject(projectId: string) {
-    console.log("CONTROLLER: CHOOSE PROJECT");
+    //console.log("CONTROLLER: CHOOSE PROJECT");
     if (!onChooseProject) return;
     onChooseProject(projectId);
     navigate(`/project/${projectId}/issues`);

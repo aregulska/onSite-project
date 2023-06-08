@@ -1,3 +1,3 @@
 export function dummyFunc() {
-  console.log("TEST TS");
+  //console.log("TEST TS");
 }

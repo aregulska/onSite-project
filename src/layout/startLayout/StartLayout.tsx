@@ -6,7 +6,7 @@ import { useAuth } from "../../contexts/authContext";
 export const StartLayout = () => {
   const location = useLocation().pathname;
   // const { user: currentUser } = useAuth();
-  // console.log("START LAYOUT", location);
+  // //console.log("START LAYOUT", location);
 
   return (
     <div className="start-screen">

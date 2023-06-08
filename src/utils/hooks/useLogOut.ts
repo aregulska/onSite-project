@@ -16,7 +16,7 @@ export const useLogOut = () => {
   const navigate = useNavigate();
 
   return () => {
-    console.log("LOG OUT");
+    //console.log("LOG OUT");
     dispatch(clearAllUsers());
     dispatch(clearAllProjects());
     dispatch(clearAllIssues());

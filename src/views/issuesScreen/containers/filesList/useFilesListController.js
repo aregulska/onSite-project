@@ -24,7 +24,7 @@ export const useFilesListController = () => {
 
   const plans = useGetAllPlansForProject(projectId);
   const plansFiltered = useFilter(filterText, plans, ["title"]);
-  console.log("FILES LIST", plans, plansFiltered);
+  //console.log("FILES LIST", plans, plansFiltered);
 
   return {
     activeFileId,
