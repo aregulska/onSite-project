@@ -58,10 +58,11 @@ export async function uploadIssueFileToStorage(
 ) {
   const storageRef = ref(storage, path);
   try {
+    console.log("UPLOAD ISSUE FILE TO STORAGE ", file, path, id);
     const uploadTask = await uploadBytes(storageRef, file);
-    //console.log("UPLOAD TASK RETURN ", uploadTask);
+    console.log("UPLOAD TASK RETURN ", uploadTask);
     const downloadUrl = await getDownloadURL(ref(storage, path));
-    //console.log("DOWNLOAD URL", downloadUrl);
+    console.log("DOWNLOAD URL", downloadUrl);
     editDocInDb("issues", id, { photoUrl: downloadUrl });
   } catch (error) {
     return error;

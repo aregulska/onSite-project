@@ -35,7 +35,8 @@ export const AddTestForm = () => {
           onOk={async () => {
             handleClearEdit();
             setOn(false);
-            return handleAddElement(newElement);
+            let addElement = await handleAddElement(newElement);
+            return addElement;
           }}
         />
       </div>

@@ -20,12 +20,12 @@ export const useFormController = (onOk: () => void | {}) => {
   }, []);
 
   // DODANIE ZDJĘCIA DO ISSUE
-  function handleOkWithPhoto() {
-    // //console.log("NEW ELEMENT", newElement);
-    const newElement = onOk();
+  async function handleOkWithPhoto() {
+    const newElement = await onOk();
+    console.log("NEW ELEMENT", newElement, photoFile);
     if (photoFile && newElement) {
       let path = "issues/" + photoFile.name;
-      //console.log("UPLOAD PHOTO", photoFile, "PATH", path);
+      console.log("UPLOAD PHOTO", photoFile, "PATH", path);
       uploadIssueFileToStorage(photoFile, path, newElement.id);
     }
   }
